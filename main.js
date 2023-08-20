@@ -8,25 +8,23 @@ const search = () =>{
     for(var i =0; i < pname.length; i++){
         let match = product[i].getElementsByTagName("h2")[0];
        
-        if(match){
+         if(match){
             let textvalue = match.textContent || match.innerHTML;
-            console.log(textvalue);
             if(textvalue.toUpperCase().indexOf(searchbox) > -1){
                 product[i].style.display ="";
-                check = false;
+            check = true;
             } else{
             product[i].style.display ="none";
            
             } 
             
-            if(check){
+            if(check == false){
                 noproduct.textContent = "no product found!!";
              }else{
                 noproduct.textContent = " ";
                 // product[i].style.display ="none";
              }
         }
-         
          
 
         
